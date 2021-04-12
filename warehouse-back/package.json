@@ -1,0 +1,14 @@
+{
+  "name": "warehouse-back",
+  "version": "1.0.0",
+  "description": "Backend for the warehouse project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ivan Zorita",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

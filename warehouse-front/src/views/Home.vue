@@ -1,18 +1,58 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-container>
+    <ProductList :products="products" />
+  </v-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ProductList from "@/components/ProductList.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
+  data() {
+    return {
+      products: [
+        {
+          name: "Dining Chair",
+          contain_articles: [
+            {
+              art_id: "1",
+              amount_of: "4"
+            },
+            {
+              art_id: "2",
+              amount_of: "8"
+            },
+            {
+              art_id: "3",
+              amount_of: "1"
+            }
+          ],
+          stock: 27
+        },
+        {
+          name: "Dinning Table",
+          contain_articles: [
+            {
+              art_id: "1",
+              amount_of: "4"
+            },
+            {
+              art_id: "2",
+              amount_of: "8"
+            },
+            {
+              art_id: "4",
+              amount_of: "1"
+            }
+          ],
+          stock: 27
+        }
+      ]
+    };
+  },
   components: {
-    HelloWorld
+    ProductList
   }
-}
+};
 </script>

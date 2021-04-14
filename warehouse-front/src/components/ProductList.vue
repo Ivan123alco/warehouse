@@ -18,12 +18,16 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import ProductItem from "@/components/ProductItem";
+
 export default {
   name: "ProductList",
   components: {
     ProductItem
   },
-  props: ["products"]
+  computed: {
+    ...mapState(["products"])
+  }
 };
 </script>

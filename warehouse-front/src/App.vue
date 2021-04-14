@@ -29,7 +29,15 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
-  name: "App"
+  name: "App",
+  methods: {
+    ...mapActions(["getProducts"])
+  },
+  async created() {
+    await this.getProducts();
+  }
 };
 </script>
